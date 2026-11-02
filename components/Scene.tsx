@@ -640,20 +640,12 @@ export default function Scene({ detailIndex, fixedState }: Props) {
 
     // The ev logo as a glass emblem at the heart of the world
     const emblemGroup = new THREE.Group();
-    const emblemMat = new THREE.MeshPhysicalMaterial({
-      // Brand logo blue (#039EFD) — the emblem keeps the logo's own colour.
-      color: 0x039efd,
-      emissive: 0x039efd,
-      emissiveIntensity: 0.35,
-      toneMapped: false,
-      fog: false,
-      metalness: 0.35,
-      roughness: 0.16,
-      clearcoat: 1,
-      clearcoatRoughness: 0.08,
-      envMapIntensity: 0.45,
-      side: THREE.DoubleSide,
-    });
+    // Brand logo blue (#039EFD), shown exactly: unlit faces so lights and
+    // reflections don't wash it out; slightly deeper sides give it depth.
+    const emblemMats = [
+      new THREE.MeshBasicMaterial({ color: 0x039efd, toneMapped: false, fog: false, side: THREE.DoubleSide }),
+      new THREE.MeshBasicMaterial({ color: 0x0270b8, toneMapped: false, fog: false, side: THREE.DoubleSide }),
+    ];
     {
       const svg = `<svg xmlns="http://www.w3.org/2000/svg"><path d="${LOGO_PATH}" fill="#000" fill-rule="evenodd"/></svg>`;
       const shapes = new SVGLoader().parse(svg).paths.flatMap((p) => SVGLoader.createShapes(p));
@@ -662,9 +654,8 @@ export default function Scene({ detailIndex, fixedState }: Props) {
       geo.translate(-LOGO_CENTER.x, -LOGO_CENTER.y, -23);
       geo.scale(k, -k, k);
       geo.computeVertexNormals();
-      const mesh = new THREE.Mesh(geo, emblemMat);
+      const mesh = new THREE.Mesh(geo, emblemMats);
       emblemGroup.add(mesh);
-      emblemGroup.add(new THREE.LineSegments(new THREE.EdgesGeometry(geo, 40), edge));
     }
     emblemGroup.scale.setScalar(0.0001);
     root.add(emblemGroup);
