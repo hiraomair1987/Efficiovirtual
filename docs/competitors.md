@@ -24,7 +24,17 @@ Removed from the original list (no search visibility found): Digitlox, Technomil
 - Website: https://www.adsformance.com/usa/
 - Why follow: "full-funnel" positioning; separate performance-marketing page; city pages (Miami, Atlanta); industry pages (B2B SaaS)
 - Services seen: paid media (Google Ads, Meta Ads), CRO, SEO/GEO, CRM and AI automation, creative, landing pages
-- Details to add:
+- Details (Semrush, US database, homepage /usa/, supplied by owner, Nov 2026):
+  - Only 6 keywords, all outside the top 30 (positions 36–83), 0 estimated traffic:
+    | Keyword | Position | Volume | KD % |
+    | --- | --- | --- | --- |
+    | pathformance | 36 | 90 | 19 |
+    | agencies specializing in full-stack digital performance services | 64 | 40 | 0 |
+    | agencia de performance | 65 | 90 | 0 |
+    | result driven online marketing agency | 68 | 320 | 41 |
+    | agencia de performance digital | 77 | 50 | 3 |
+    | results driven marketing specialists | 83 | 50 | n/a |
+  - Takeaway: the US homepage is not winning in Google, so it's a design/positioning benchmark, not a keyword source. Possible phrase idea for us: "results-driven" wording (e.g. "results-driven digital marketing agency", 320/month for the close variant), used naturally.
 
 ### SmartSites
 - Why follow: strong SEO, PPC and website optimisation presence
