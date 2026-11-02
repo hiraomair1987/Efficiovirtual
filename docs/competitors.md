@@ -52,7 +52,25 @@ Removed from the original list (no search visibility found): Digitlox, Technomil
 - Website: https://adnika.com/
 - Why follow: strongest SEO structure in the list — service + Dubai pages (local SEO, interactive web design, SEO Dubai)
 - Services seen: strategy, design, development, SEO (local, technical, AI), paid advertising, automation, inbound marketing
-- Details to add:
+- Details (homepage, supplied by owner, Nov 2026):
+  - Semrush: no organic keywords recorded for the homepage itself.
+  - H1: "A Digital Marketing Agency in Dubai That Grows Brands"
+  - Homepage section order (H2 → H3):
+    1. Everything Your Brand Needs to Grow, All in One Place.
+    2. 15+ Years of Crafting Digital Breakthroughs — project cards as H3: German Medical Center, Roxana Aesthetics, Elora Polyclinic, Arabland, Concept Plus, Bafco, A2 Sweden
+    3. Clients & partners (logos)
+    4. Design, build, grow. Thirteen practices, one team. — H3: Grow / Performance Marketing; Build / Engineering; Design / Brand & Web
+    5. One connected team across Dubai and Stockholm
+    6. What Clients Say (testimonials)
+    7. Why the work gets results — H3: The same team from start to finish; Build, grow and design together; Made to work well; Based in Dubai, ready to go further; Support after launch; Let's build yours
+    8. How your project moves forward — H3: Discover, Design, Build, Launch, Grow
+    9. Measurable digital growth since 2016 (numbers)
+    10. Ideas and advice for better digital growth — blog posts as H3: Meta Ads vs Google Ads for UAE Clinics; How to Get Your Brand Cited by ChatGPT and Perplexity (GEO Explained); Performance Marketing in Dubai: What KPIs Actually Matter in 2026; The ROI of a Digital Marketing Agency: What Your Dubai Business Gets for Its Investment
+    11. Frequently Asked Questions
+    12. Tell us what is not working (contact form)
+    13. Let's make something unmissable. / Tell us what has stalled (footer CTA); footer H4s: Design, Build, Grow, Studio, Dubai · GCC
+  - Worth learning: main keyword ("digital marketing agency") in the H1; real projects named on the homepage; a "why us" section; blog posts answering buyer questions; problem-led CTAs ("Tell us what is not working").
+  - Don't copy: "15+ years", "since 2016" or results claims — they are Adnika's own history.
 
 ### MetaTech
 - Why follow: Google Ads, SEO, web and app development under one roof
