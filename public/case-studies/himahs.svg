@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e3a8a"/>
+      <stop offset="1" stop-color="#14245c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="26" fill="#c9a24a"/>
+  <rect y="760" width="1600" height="240" fill="#9b2226"/>
+  <g transform="translate(110 150)" fill="none" stroke="#c9a24a" stroke-width="10">
+    <path d="M90 0 L180 36 V120 C180 190 138 236 90 260 C42 236 0 190 0 120 V36 Z"/>
+    <path d="M90 70 V200 M40 120 H140" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+  </g>
+  <text x="360" y="230" fill="#ffffff" font-size="118" font-weight="700" letter-spacing="6">HIMAHS</text>
+  <text x="360" y="310" fill="#dbe4ff" font-size="44">Hira Institute of Medical and</text>
+  <text x="360" y="368" fill="#dbe4ff" font-size="44">Allied Health Sciences · Sukkur</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="34" fill="#ffffff">
+    <rect x="110" y="480" width="370" height="70" rx="35" fill="none" stroke="#c9a24a" stroke-width="3"/>
+    <text x="295" y="527" text-anchor="middle">BS Nursing</text>
+    <rect x="510" y="480" width="330" height="70" rx="35" fill="none" stroke="#c9a24a" stroke-width="3"/>
+    <text x="675" y="527" text-anchor="middle">CNA Diploma</text>
+    <rect x="870" y="480" width="480" height="70" rx="35" fill="none" stroke="#c9a24a" stroke-width="3"/>
+    <text x="1110" y="527" text-anchor="middle">Laboratory Technician</text>
+    <rect x="110" y="580" width="480" height="70" rx="35" fill="none" stroke="#c9a24a" stroke-width="3"/>
+    <text x="350" y="627" text-anchor="middle">Operation Theatre</text>
+    <rect x="620" y="580" width="500" height="70" rx="35" fill="none" stroke="#c9a24a" stroke-width="3"/>
+    <text x="870" y="627" text-anchor="middle">Anesthesia Technician</text>
+  </g>
+  <text x="110" y="895" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="700">Admissions Are Now Open</text>
+</svg>

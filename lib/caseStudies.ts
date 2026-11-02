@@ -157,6 +157,7 @@ export const caseStudies: CaseStudy[] = [
     approach:
       "We designed a website that leads with an “Admissions Are Now Open” hero and a clear contact button, followed by an introduction to the institute and a message from its founder.\n\nA programmes section presents courses such as BS Nursing (Generic), CNA Diploma, Laboratory Technician, Dispenser, Operation Theatre and Anesthesia Technician, each with its own photo, with a link to see more courses. The site also covers the institute’s core values (character, courage and competence), a step-by-step enquiry form, and a footer with important links, quick links to departments, phone numbers, email and opening hours.",
     results: [],
+    image: "/case-studies/himahs.svg",
   },
   {
     slug: "westpaq-cleaning-services",
