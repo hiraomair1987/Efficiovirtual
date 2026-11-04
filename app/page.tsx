@@ -11,10 +11,47 @@ import { homeFaqs, processSteps, services, stages } from "@/lib/content";
 import { site, socials } from "@/lib/site";
 import { locations } from "@/lib/locations";
 import { pageMeta } from "@/lib/seo";
+import { caseStudies, publishedCaseStudies } from "@/lib/caseStudies";
+import { withAvailableImages } from "@/lib/caseStudyImages";
 
-const pageTitle = "efficiovirtual | Digital Marketing, Google Ads & Web Design";
-const pageDescription =
-  "Grow your brand with Google Ads, marketing automation, 3D websites, landing pages, and creative design from efficiovirtual.";
+const pageTitle = site.title;
+const pageDescription = site.description;
+
+/** Real projects shown in "Selected work" (slugs from lib/caseStudies.ts). */
+const featuredSlugs = ["himahs", "westpaq-cleaning-services", "aurora-estates", "revsol", "harry-narang-consulting", "art-of-watch-storytelling"];
+const featured = withAvailableImages(caseStudies).filter((c) => c.published && featuredSlugs.includes(c.slug));
+featured.sort((a, b) => featuredSlugs.indexOf(a.slug) - featuredSlugs.indexOf(b.slug));
+
+const yearsWorking = new Date().getFullYear() - site.foundingYear;
+const numbers = [
+  { value: String(site.foundingYear), label: "Working with clients since" },
+  { value: String(publishedCaseStudies.length), label: "Projects in our case studies" },
+  { value: String(services.length), label: "Services under one team" },
+  { value: String(site.areasServed.length), label: "Countries we work with" },
+];
+
+const reasons = [
+  {
+    title: "One team for marketing, websites and apps",
+    text: "Your ads, website, landing pages and app are planned and built by the same team, so nothing gets lost between agencies.",
+  },
+  {
+    title: "Working across time zones",
+    text: `We’re based in ${site.city} and work remotely with clients in the USA, UAE, Canada, UK and Pakistan, with calls scheduled at times that suit you.`,
+  },
+  {
+    title: "Flexible pricing",
+    text: "Pricing is shaped around your goals and budget — start with a single service or combine several as you grow.",
+  },
+  {
+    title: `${site.supportAfterLaunch.charAt(0).toUpperCase() + site.supportAfterLaunch.slice(1)} of support after launch`,
+    text: `Every website, app and SaaS project includes ${site.supportAfterLaunch} of support after it goes live, for fixes, updates and small changes.`,
+  },
+  {
+    title: `${yearsWorking}+ years of client work`,
+    text: `We’ve been helping businesses grow online since ${site.foundingYear}, across travel, healthcare, real estate, technology and more.`,
+  },
+];
 
 export const metadata: Metadata = pageMeta({ title: pageTitle, description: pageDescription, path: "/", absoluteTitle: true });
 
@@ -25,8 +62,8 @@ const extraServices = services.filter((s) => !coreSlugs.includes(s.slug));
 
 /**
  * Structured data. Only verified details are included: name, website, email,
- * logo, social profiles, services and the markets you work with.
- * No address, phone number, reviews or ratings — add them only when real.
+ * phone, city, founding year, logo, social profiles, services and markets.
+ * No street address, reviews or ratings — add them only when real.
  */
 const jsonLd = [
   {
@@ -36,6 +73,9 @@ const jsonLd = [
     name: "efficiovirtual",
     url: site.url,
     email: site.contactEmail,
+    telephone: site.phoneHref.replace("tel:", ""),
+    foundingDate: String(site.foundingYear),
+    address: { "@type": "PostalAddress", addressLocality: site.city, addressCountry: site.countryCode },
     logo: `${site.url}/brand/logo-original.webp`,
     image: `${site.url}/brand/logo-original.webp`,
     description: pageDescription,
@@ -84,12 +124,12 @@ export default function Home() {
                 Digital marketing agency
               </p>
               <h1 id="hero-title" className="display-xl mt-5">
-                Digital marketing that moves your brand <em className="italic text-accent">forward.</em>
+                The digital marketing agency that moves your brand <em className="italic text-accent">forward.</em>
               </h1>
               <p className="lede mt-6 max-w-xl">
-                efficiovirtual helps startups, small businesses and growing brands turn attention into enquiries and sales.
-                We plan and run Google Ads, build landing pages and 3D websites, automate follow-up and design the creative
-                that ties it all together.
+                efficiovirtual is a results-driven digital marketing and web design agency helping startups, small businesses
+                and growing brands turn attention into enquiries and sales. We run Google Ads and SEO, design and develop
+                websites, landing pages and apps, automate follow-up and create the creative that ties it all together.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <Link href="#contact" className="btn btn-primary">
@@ -224,7 +264,100 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4 · Approach: Understand, Create, Improve */}
+      {/* 4 · Selected work */}
+      <section id="work" data-chapter data-state-start="5" aria-labelledby="work-title" className="chapter">
+        <div className="shell pb-24 pt-32">
+          <div className="flex flex-col justify-between gap-5 text-halo md:flex-row md:items-end">
+            <div className="max-w-2xl">
+              <p className="eyebrow" data-reveal>
+                Selected work
+              </p>
+              <h2 id="work-title" className="display-md mt-4" data-reveal style={{ ["--d" as string]: "100ms" }}>
+                Websites and digital projects we’ve delivered.
+              </h2>
+            </div>
+            <p className="max-w-sm text-[15px]" data-reveal style={{ ["--d" as string]: "200ms" }}>
+              A few recent projects across healthcare, cleaning services, real estate, industrial supplies, consulting and
+              luxury brands.
+            </p>
+          </div>
+          <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {featured.map((c, i) => (
+              <li key={c.slug} data-reveal style={{ ["--d" as string]: `${i * 80}ms` }}>
+                <TiltCard className="flex h-full flex-col overflow-hidden p-0">
+                  <div className="relative aspect-[16/10] overflow-hidden border-b border-cream/10 bg-plum-900">
+                    {c.image ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={c.image} alt={`${c.client} — ${c.title}`} loading="lazy" className="h-full w-full object-cover object-top" />
+                    ) : (
+                      <LogoMark className="case-thumb-mark mx-auto h-full" />
+                    )}
+                    {c.kind === "concept" && <span className="case-badge concept">{c.badge ?? "Concept"}</span>}
+                  </div>
+                  <div className="flex flex-1 flex-col p-6">
+                    <p className="text-[11px] uppercase tracking-[0.18em] text-violet-300">
+                      {c.industry}
+                      {c.country ? ` · ${c.country}` : ""}
+                    </p>
+                    <h3 className="mt-2 text-[1.45rem] leading-tight">{c.client}</h3>
+                    <p className="mt-2 flex-1 text-sm leading-relaxed">{c.summary}</p>
+                    <Link href={`/case-studies/${c.slug}`} className="arrow-link stretched mt-4">
+                      View {c.client} case study <span aria-hidden="true">→</span>
+                    </Link>
+                  </div>
+                </TiltCard>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-10" data-reveal>
+            <Link href="/case-studies" className="btn btn-ghost">
+              See all case studies <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 5 · Why work with efficiovirtual */}
+      <section id="why" data-chapter data-state-start="5" aria-labelledby="why-title" className="chapter">
+        <div className="shell pb-24 pt-20">
+          <div className="max-w-2xl text-halo">
+            <p className="eyebrow" data-reveal>
+              Why efficiovirtual
+            </p>
+            <h2 id="why-title" className="display-md mt-4" data-reveal style={{ ["--d" as string]: "100ms" }}>
+              Why businesses work with our digital marketing agency.
+            </h2>
+          </div>
+          <dl className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
+            {numbers.map((n, i) => (
+              <div key={n.label} className="glass rounded-2xl p-5 sm:p-6" data-reveal style={{ ["--d" as string]: `${i * 80}ms` }}>
+                <dt className="text-sm text-cream-muted">{n.label}</dt>
+                <dd className="font-display mt-1 text-4xl text-cream tabular-nums sm:text-5xl">{n.value}</dd>
+              </div>
+            ))}
+          </dl>
+          <ul className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {reasons.map((r, i) => (
+              <li key={r.title} data-reveal style={{ ["--d" as string]: `${i * 80}ms` }}>
+                <TiltCard className="h-full p-6">
+                  <h3 className="text-xl leading-snug sm:text-[1.4rem]">{r.title}</h3>
+                  <p className="mt-2 text-[15px] leading-relaxed">{r.text}</p>
+                </TiltCard>
+              </li>
+            ))}
+            <li data-reveal style={{ ["--d" as string]: "400ms" }}>
+              <div className="cta-band flex h-full flex-col justify-between gap-5 rounded-3xl p-6">
+                <h3 className="text-xl leading-snug sm:text-[1.4rem]">Let’s plan your next step</h3>
+                <Link href="#contact" className="btn btn-primary self-start">
+                  Talk to us <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* 6 · Approach: Understand, Create, Improve */}
       <section id="approach" data-chapter data-state-start="5" aria-labelledby="approach-title" className="chapter chapter-tall unpin-short">
         <div className="chapter-pin">
           <div className="shell">
@@ -270,14 +403,15 @@ export default function Home() {
             </div>
             <div className="lede space-y-4 text-halo" data-reveal style={{ ["--d" as string]: "200ms" }}>
               <p>
-                efficiovirtual works remotely with businesses in the USA, the UAE, Canada, the UK and Pakistan. Wherever you
+                efficiovirtual is based in {site.city}, {site.country}, and works remotely with businesses in the USA, the UAE,
+                Canada, the UK and Pakistan. Wherever you
                 are, the work starts the same way: understanding your customers, your competitors and how people in your
                 market search and buy.
               </p>
               <p>
                 From there we adapt the details that matter locally — search terms, spelling, currency, campaign timing and
                 the tone of your messaging — while keeping your brand consistent across every channel. Communication happens
-                by email and scheduled calls at times that suit your time zone.
+                by email, phone and scheduled calls at times that suit your time zone.
               </p>
               <p className="text-[15px]">
                 See what we consider in each market:{" "}
@@ -335,16 +469,20 @@ export default function Home() {
               Let’s talk
             </p>
             <h2 id="contact-title" className="display-lg mt-5" data-reveal style={{ ["--d" as string]: "100ms" }}>
-              Ready to make your next move count?
+              Tell us what’s holding your growth back.
             </h2>
             <p className="lede mt-6 max-w-md" data-reveal style={{ ["--d" as string]: "200ms" }}>
-              Tell us what you offer, who you want to reach and what you’d like to improve. We’ll reply with questions or
-              suggested next steps.
+              Fewer enquiries than you’d like, a website that doesn’t convert, ads that cost too much? Tell us what you offer
+              and what isn’t working. We’ll reply with questions or suggested next steps.
             </p>
-            <div className="mt-8" data-reveal style={{ ["--d" as string]: "300ms" }}>
+            <div className="mt-8 flex flex-col items-start gap-4" data-reveal style={{ ["--d" as string]: "300ms" }}>
               <a href={`mailto:${site.contactEmail}`} className="email-cta">
                 <span className="text-[11px] uppercase tracking-[0.2em] text-cream-muted">Email efficiovirtual</span>
                 <span className="font-display text-2xl text-cream sm:text-3xl">{site.contactEmail}</span>
+              </a>
+              <a href={site.phoneHref} className="email-cta">
+                <span className="text-[11px] uppercase tracking-[0.2em] text-cream-muted">Call efficiovirtual</span>
+                <span className="font-display text-2xl text-cream sm:text-3xl">{site.phone}</span>
               </a>
             </div>
             <div className="mt-8" data-reveal style={{ ["--d" as string]: "400ms" }}>

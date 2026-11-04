@@ -6,6 +6,8 @@ const chapters = [
   { id: "top", label: "Home" },
   { id: "intro", label: "About" },
   { id: "services", label: "Services" },
+  { id: "work", label: "Work" },
+  { id: "why", label: "Why us" },
   { id: "approach", label: "Approach" },
   { id: "markets", label: "Where we work" },
   { id: "faq", label: "FAQ" },

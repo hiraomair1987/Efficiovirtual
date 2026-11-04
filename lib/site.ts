@@ -4,14 +4,25 @@
  */
 export const site = {
   name: "efficiovirtual",
-  title: "efficiovirtual | Digital Marketing, Google Ads & Web Design",
+  title: "Digital Marketing & Web Design Agency | efficiovirtual",
   description:
-    "Grow your brand with Google Ads, marketing automation, 3D websites, landing pages, and creative design from efficiovirtual.",
+    "efficiovirtual is a digital marketing and website development agency in Karachi, working with businesses in the USA, UAE, Canada, UK and Pakistan.",
   /** Markets where efficiovirtual takes on clients (remote work). Used in structured data and homepage copy. */
   areasServed: ["United States", "United Arab Emirates", "Canada", "United Kingdom", "Pakistan"],
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://efficiovirtual.com",
   /** Contact email used by every email link and the contact form. */
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "admin@efficiovirtual.com",
+  /** Phone number shown on the site (display format) and its dial link. */
+  phone: "+92 329 3115339",
+  phoneHref: "tel:+923293115339",
+  /** Where the business is based (city and country only — no street address). */
+  city: "Karachi",
+  country: "Pakistan",
+  countryCode: "PK",
+  /** Year efficiovirtual started taking on client work. */
+  foundingYear: 2020,
+  /** Support included after a project launches. */
+  supportAfterLaunch: "3 months",
   /**
    * Optional: path to your own logo file inside /public, e.g. "/brand/logo.svg".
    * Leave as null to use the built-in vector version of the ev mark.
