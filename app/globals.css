@@ -1449,13 +1449,11 @@ a.work-card-link:hover .work-arrow {
 [data-tilt-hover] {
   --rx: 0deg;
   --ry: 0deg;
-  transform-style: preserve-3d;
-  transition: transform 0.35s var(--ease);
 }
+/* Flat (no preserve-3d) so clicks always reach the links inside */
 [data-tilt-hover] > .tilt-inner {
-  transform: rotateX(var(--rx)) rotateY(var(--ry));
+  transform: perspective(1100px) rotateX(var(--rx)) rotateY(var(--ry));
   transition: transform 0.25s ease-out;
-  transform-style: preserve-3d;
 }
 .blog-card {
   position: relative;
@@ -1635,4 +1633,35 @@ a.work-card-link:hover .work-arrow {
 html,
 body {
   overflow-x: clip;
+}
+
+/* Featured blog card: picture fills its half of the card without spilling over the text */
+@media (min-width: 1024px) {
+  .blog-large .blog-cover {
+    position: relative;
+    min-width: 0;
+    min-height: 100%;
+    aspect-ratio: auto;
+  }
+  .blog-large .blog-cover a,
+  .blog-large .blog-cover img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Phones: gentler 3D so cards never overlap headings or look faded */
+@media (max-width: 767px) {
+  [data-3d]:not([data-3d="hero"]),
+  [data-3d="flip-l"],
+  [data-3d="flip-r"] {
+    transform: rotateX(calc((1 - var(--p)) * 14deg)) translate3d(0, calc((1 - var(--p)) * 24px), 0) !important;
+    transform-origin: 50% 100% !important;
+    opacity: calc(0.65 + var(--p) * 0.35);
+  }
+  [data-3d="hero"] {
+    transform: rotateX(calc(var(--h) * 22deg)) scale(calc(1 - var(--h) * 0.06));
+  }
 }
