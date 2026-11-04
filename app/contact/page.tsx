@@ -42,10 +42,14 @@ export default function ContactPage() {
             <p className="lede mt-6 max-w-md">
               Tell us about your brand, your goals and your timing. We read every message and reply with honest next steps.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col items-start gap-4">
               <a href={`mailto:${site.contactEmail}`} className="email-cta">
                 <span className="text-[11px] uppercase tracking-[0.2em] text-cream-muted">Email us</span>
                 <span className="font-display text-2xl text-cream sm:text-3xl">{site.contactEmail}</span>
+              </a>
+              <a href={site.phoneHref} className="email-cta">
+                <span className="text-[11px] uppercase tracking-[0.2em] text-cream-muted">Call us</span>
+                <span className="font-display text-2xl text-cream sm:text-3xl">{site.phone}</span>
               </a>
             </div>
             <div className="mt-8">

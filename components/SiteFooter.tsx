@@ -16,9 +16,15 @@ export default function SiteFooter() {
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-cream-muted">
             Google Ads, SEO, social media marketing, websites and creative — for brands that want every digital move to count.
           </p>
-          <a href={`mailto:${site.contactEmail}`} className="text-link mt-6 inline-block text-sm">
+          <a href={`mailto:${site.contactEmail}`} className="text-link mt-6 block text-sm">
             {site.contactEmail}
           </a>
+          <a href={site.phoneHref} className="text-link mt-2 block text-sm">
+            {site.phone}
+          </a>
+          <p className="mt-2 text-sm text-cream-muted">
+            Based in {site.city}, {site.country}
+          </p>
           <SocialLinks className="mt-6" />
         </div>
         <nav aria-label="Footer services">

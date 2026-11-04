@@ -91,7 +91,7 @@ export const homeFaqs: Faq[] = [
   },
   {
     q: "Do you look after websites, apps and SaaS products after launch?",
-    a: "Yes, if you need it — and for as long as you need it. Ongoing care can include updates, bug fixes, new features, backups, security, speed checks and content changes.",
+    a: "Yes. Every website, app and SaaS project includes 3 months of support after launch. That can cover updates, bug fixes, backups, security, speed checks and content changes.",
   },
   {
     q: "Can we work together remotely?",
@@ -251,7 +251,7 @@ export const services: Service[] = [
   {
     slug: "website-development",
     seoTitle: "Website Development & Maintenance",
-    seoDescription: "Website development and maintenance: fast, secure, mobile-friendly websites, plus updates, backups and support for as long as you need it.",
+    seoDescription: "Website development and maintenance: fast, secure, mobile-friendly websites, plus updates, backups and 3 months of support after launch.",
     h1: "Website development and maintenance",
     forWho: "Businesses that need a reliable website — and someone to keep it running.",
     name: "Website Development & Maintenance",
@@ -323,7 +323,7 @@ export const services: Service[] = [
       titleAbsolute: "App Development Services | efficiovirtual",
       intro: [
         "A useful app starts with a clear understanding of its users and purpose. efficiovirtual helps businesses plan and develop digital app experiences around real needs, from early ideas and user flows to design and development.",
-        "Our app development services cover iOS, Android and web apps — planned, designed, built, launched and supported for as long as you need.",
+        "Our app development services cover iOS, Android and web apps — planned, designed, built, launched and supported for 3 months after launch.",
       ],
       sections: [
         {
@@ -380,7 +380,7 @@ export const services: Service[] = [
         },
         {
           q: "Do you provide app updates and maintenance?",
-          a: "Yes. After launch we can provide updates, bug fixes, new features and ongoing support for as long as you need it. Tell us what you need by email and we’ll agree what the support covers.",
+          a: "Yes. Every app includes 3 months of support after launch, covering updates, bug fixes and small improvements. Tell us what you need by email and we’ll agree what the support covers.",
         },
         {
           q: "Do you build apps for both iOS and Android?",
@@ -394,7 +394,7 @@ export const services: Service[] = [
     short: "Mobile and web apps",
     summary: "App development for iOS, Android and the web — planned, designed and built around what your users actually need.",
     intro:
-      "We turn an app idea into a working product: planning the features that matter most, designing screens that are easy to use, building and testing the app, and helping you launch it. After launch, we can keep improving and maintaining it for as long as you need.",
+      "We turn an app idea into a working product: planning the features that matter most, designing screens that are easy to use, building and testing the app, and helping you launch it. After launch, we support it for 3 months with updates and fixes.",
     includes: [
       "Discovery and feature planning",
       "UX and UI design for every screen",
@@ -416,7 +416,7 @@ export const services: Service[] = [
     short: "Software-as-a-service products",
     summary: "SaaS development from first idea to paying customers — planned, designed, built and looked after as your product grows.",
     intro:
-      "We help you turn a software idea into a working SaaS product: deciding what the first version needs, designing an interface people enjoy using, building secure accounts, subscriptions and dashboards, and launching it. After launch we keep developing and maintaining the product for as long as you need.",
+      "We help you turn a software idea into a working SaaS product: deciding what the first version needs, designing an interface people enjoy using, building secure accounts, subscriptions and dashboards, and launching it. After launch we support the product for 3 months with updates and fixes.",
     includes: [
       "Product discovery and first-version (MVP) planning",
       "UX and UI design for web apps and dashboards",
