@@ -13,7 +13,9 @@ export default function BlogCard({ post, flip, large }: { post: Post; flip?: "l"
         <div className="tilt-inner h-full">
           <div className={`blog-card ${large ? "lg:grid lg:grid-cols-[1.25fr_1fr]" : ""}`}>
             <div className={`blog-cover ${large ? "lg:aspect-auto lg:h-full lg:border-b-0 lg:border-r" : ""}`}>
-              <img src={post.cover} alt={post.coverAlt} loading={large ? "eager" : "lazy"} />
+              <Link href={`/blog/${post.slug}`} tabIndex={-1} aria-hidden="true" className="block h-full">
+                <img src={post.cover} alt="" loading={large ? "eager" : "lazy"} />
+              </Link>
             </div>
             <div className={`flex flex-1 flex-col ${large ? "p-7 sm:p-10" : "p-6"}`}>
               <div className="flex flex-wrap items-center gap-3 text-xs text-cream-muted">
@@ -22,10 +24,14 @@ export default function BlogCard({ post, flip, large }: { post: Post; flip?: "l"
                   <time dateTime={post.date}>{fmt(post.date)}</time> · {readMinutes(post)} min read
                 </span>
               </div>
-              <h3 className={`mt-4 font-display leading-tight text-cream ${large ? "text-3xl sm:text-[2.4rem]" : "text-[1.45rem]"}`}>{post.title}</h3>
+              <h3 className={`mt-4 font-display leading-tight text-cream ${large ? "text-3xl sm:text-[2.4rem]" : "text-[1.45rem]"}`}>
+                <Link href={`/blog/${post.slug}`} className="hover:text-accent">
+                  {post.title}
+                </Link>
+              </h3>
               <p className={`mt-3 flex-1 leading-relaxed ${large ? "text-[17px]" : "text-[15px]"}`}>{post.description}</p>
-              <Link href={`/blog/${post.slug}`} className="arrow-link stretched mt-5">
-                Read the article <span className="sr-only">: {post.title}</span> <span aria-hidden="true">→</span>
+              <Link href={`/blog/${post.slug}`} className="arrow-link stretched mt-5" aria-hidden="true" tabIndex={-1}>
+                Read the article <span aria-hidden="true">→</span>
               </Link>
             </div>
           </div>
