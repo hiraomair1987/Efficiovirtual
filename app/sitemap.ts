@@ -3,6 +3,7 @@ import { site } from "@/lib/site";
 import { services } from "@/lib/content";
 import { locations } from "@/lib/locations";
 import { publishedCaseStudies } from "@/lib/caseStudies";
+import { posts } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -19,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
           ...publishedCaseStudies.map((c) => ({ url: `${site.url}/case-studies/${c.slug}`, changeFrequency: "yearly" as const, priority: 0.6 })),
         ]
       : []),
+    { url: `${site.url}/blog`, changeFrequency: "weekly" as const, priority: 0.8 },
+    ...posts.map((p) => ({ url: `${site.url}/blog/${p.slug}`, changeFrequency: "monthly" as const, priority: 0.7 })),
   ];
   return list.map((e) => ({ ...e, lastModified }));
 }

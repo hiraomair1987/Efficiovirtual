@@ -65,7 +65,7 @@ export default function SiteHeader() {
             <Wordmark />
           </Link>
 
-          <nav aria-label="Main" className="hidden md:block">
+          <nav aria-label="Main" className="hidden lg:block">
             <ul className="flex items-center gap-8 text-[15px]">
               {nav.map((item) => (
                 <li key={item.href}>
@@ -84,7 +84,7 @@ export default function SiteHeader() {
             <button
               ref={buttonRef}
               type="button"
-              className="menu-btn md:hidden"
+              className="menu-btn lg:hidden"
               aria-expanded={open}
               aria-controls="mobile-menu"
               onClick={() => setOpen((o) => !o)}
@@ -110,7 +110,7 @@ export default function SiteHeader() {
       </nav>
 
       {/* Mobile menu */}
-      <div id="mobile-menu" ref={menuRef} hidden={!open} className="hdr-mobile md:hidden">
+      <div id="mobile-menu" ref={menuRef} hidden={!open} className="hdr-mobile lg:hidden">
         <nav aria-label="Mobile">
           <ul className="shell flex flex-col gap-1 pb-6 pt-4">
             {nav.map((item) => (
