@@ -38,6 +38,330 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "local-seo-for-dentists-and-clinics",
+    title: "Local SEO for dentists and clinics: how to get more patients from Google",
+    description:
+      "A practical local SEO guide for dentists and medical clinics: Google Business Profile, reviews, treatment pages, location signals and mobile booking.",
+    category: "Local SEO",
+    date: "2026-11-05",
+    cover: "/blog/local-seo-dentists-clinics.svg",
+    coverAlt: "Illustration of a clinic map pin next to local search results with star ratings",
+    keywords: ["local seo for dentists", "dental seo", "dental marketing services", "healthcare marketing agency", "local seo for clinics"],
+    services: ["seo-google-business", "website-development", "google-ads"],
+    body: [
+      {
+        type: "p",
+        text: "When someone needs a dentist or a clinic, they usually search Google with words like “dentist near me”, “dental clinic in Karachi” or “emergency dentist”. The clinics that appear in the map results and the first few listings get most of the calls. Local SEO is the work that helps your clinic appear there — and most of it is within your control.",
+      },
+      { type: "h2", text: "What is local SEO for a dental or medical clinic?" },
+      {
+        type: "p",
+        text: "Local SEO means improving your online presence so Google shows your clinic to people searching nearby. Google’s local results mainly depend on three things: relevance (does your clinic match what was searched?), distance (how close you are to the searcher) and prominence (how well known and trusted your clinic is, including reviews and links). You can’t change distance, but you can strongly improve relevance and prominence.",
+      },
+      {
+        type: "img",
+        src: "/blog/local-seo-clinic-checklist.svg",
+        alt: "Six things that help a clinic rank locally: Google Business Profile, reviews, treatment pages, location, mobile booking and consistent details",
+        caption: "The six areas that make the biggest difference for clinics.",
+      },
+      { type: "h2", text: "1. Complete and verify your Google Business Profile" },
+      {
+        type: "p",
+        text: "Your Google Business Profile is the listing that appears on Google Maps (see our [step-by-step setup guide](/blog/google-business-profile-setup-guide)). Choose the most accurate primary category (for example “Dentist”, “Dental clinic” or “Medical clinic”), add your exact address, phone number, opening hours, website and appointment link, and upload real photos of your clinic, team and equipment.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Add each treatment you offer as a service, with a short description",
+          "Keep holiday and emergency hours up to date",
+          "Use Google posts to share news, offers or health tips",
+          "Answer questions people ask on your profile",
+        ],
+      },
+      { type: "h2", text: "2. Build a steady flow of genuine reviews" },
+      {
+        type: "p",
+        text: "Reviews influence both rankings and whether patients choose you. Ask every satisfied patient — for example with a short message or QR code after their appointment — and reply to every review politely. Never buy reviews or offer rewards for them, which breaks Google’s policies.",
+      },
+      {
+        type: "tip",
+        title: "Protect patient privacy in replies",
+        text: "Thank the reviewer, but never confirm that they are a patient or mention any treatment or health detail in your reply. Invite them to contact the clinic privately instead.",
+      },
+      { type: "h2", text: "3. Create a page for each treatment" },
+      {
+        type: "p",
+        text: "A single “Services” page listing everything rarely ranks well. Give each main treatment its own page — implants, whitening, braces, root canal, check-ups — explaining what it is, who it’s for, what to expect and how to book. These pages match what patients search for and give Google a clear page to show.",
+      },
+      { type: "h2", text: "4. Show your location clearly" },
+      {
+        type: "p",
+        text: "Put your full address, a map and directions on your contact page, and mention the areas and neighbourhoods you serve naturally in your content. If you have more than one branch, create a separate page for each location with its own address, phone number, hours and photos.",
+      },
+      { type: "h2", text: "5. Make booking easy on a phone" },
+      {
+        type: "p",
+        text: "Most local searches happen on mobile. Your website should load quickly, show a tap-to-call button and make it simple to request an appointment. A fast, clear site also helps people stay rather than going back to Google to choose another clinic.",
+      },
+      { type: "h2", text: "6. Keep your details consistent everywhere" },
+      {
+        type: "p",
+        text: "Your clinic’s name, address and phone number should be exactly the same on your website, Google Business Profile, social media and directories. Inconsistent details confuse both patients and search engines.",
+      },
+      { type: "h2", text: "Should a clinic use Google Ads or SEO first?" },
+      {
+        type: "p",
+        text: "Local SEO builds visibility that lasts, but it takes time. Google Ads can bring bookings straight away while SEO grows. Many clinics run a small, well-targeted ad campaign for their most valuable treatments while building their local SEO. Read our guide to [Google Ads vs SEO](/blog/google-ads-vs-seo-new-business) for more on choosing.",
+      },
+      {
+        type: "tip",
+        title: "Check healthcare advertising rules",
+        text: "Many countries regulate how clinics advertise — for example claims about results or before-and-after photos. Check the rules that apply where you practise before publishing.",
+      },
+      { type: "cta", text: "Want more patients from Google? We set up and improve Google Business Profiles, treatment pages and clinic websites.", service: "seo-google-business" },
+    ],
+    faqs: [
+      { q: "How do dentists rank higher on Google Maps?", a: "Complete and verify your Google Business Profile, choose the right category, collect genuine reviews, keep your details consistent and build a website with a page for each treatment." },
+      { q: "How long does local SEO take for a clinic?", a: "Some improvements, such as a complete Google Business Profile, can help quickly. Stronger rankings usually build over several months, depending on competition in your area." },
+      { q: "Do reviews really affect local rankings?", a: "Reviews are part of what Google considers for local results, and they strongly influence whether patients choose your clinic." },
+      { q: "Do I need a separate page for each clinic branch?", a: "Yes. Each branch should have its own page with its address, phone number, opening hours and photos, plus its own Google Business Profile." },
+    ],
+  },
+  {
+    slug: "how-long-does-seo-take",
+    title: "How long does SEO take to work?",
+    description:
+      "How long SEO takes to show results, what affects the timeline, what happens month by month and how to tell whether your SEO is working.",
+    category: "SEO",
+    date: "2026-11-05",
+    cover: "/blog/how-long-seo-takes.svg",
+    coverAlt: "Illustration of a calendar of months next to a rising growth line",
+    keywords: ["how long does seo take", "how long does seo take to work", "seo timeline", "seo results"],
+    services: ["seo-google-business"],
+    body: [
+      {
+        type: "p",
+        text: "It’s the question every business asks before investing in SEO: how long until it works? The honest answer is that SEO usually takes months, not days — and the exact time depends on your website, your competitors and how much work goes in. Google’s own guidance on hiring an SEO says it often takes four months to a year to put improvements in place and start seeing the benefit.",
+      },
+      {
+        type: "img",
+        src: "/blog/seo-timeline.svg",
+        alt: "A typical SEO timeline: month 1 audit and plan, months 2–3 new pages and indexing, months 4–6 first rankings, months 6–12 growth",
+        caption: "A typical pattern — not a guarantee. Your starting point and competition change the timing.",
+      },
+      { type: "h2", text: "Why does SEO take so long?" },
+      {
+        type: "p",
+        text: "Google needs to find your pages, understand them and compare them with every other page competing for the same searches. Trust is built over time — through useful content, a good experience for visitors and other websites linking to yours. Changes you make today may take weeks to be noticed and longer to affect rankings.",
+      },
+      { type: "h2", text: "What affects how quickly SEO works" },
+      {
+        type: "ul",
+        items: [
+          "Competition: ranking for “dentist in Karachi” is faster than for “digital marketing agency”",
+          "Your website’s age and history: new sites usually take longer",
+          "Technical health: slow or broken pages hold everything back",
+          "Content: pages that answer searchers’ questions well rank sooner",
+          "Links and mentions from other trusted websites",
+          "Consistency: SEO done every month beats a one-off burst",
+        ],
+      },
+      { type: "h2", text: "What happens month by month" },
+      { type: "h3", text: "Month 1: audit and plan" },
+      { type: "p", text: "Fix technical problems, research keywords, decide which page targets which search (a [keyword map](/blog/keyword-mapping-beginners-guide)) and set up tracking in Google Search Console." },
+      { type: "h3", text: "Months 2–3: build and improve pages" },
+      { type: "p", text: "Improve existing pages, publish new service pages and articles, and complete your Google Business Profile. Google starts finding and indexing the changes." },
+      { type: "h3", text: "Months 4–6: first movement" },
+      { type: "p", text: "Rankings often begin to rise for easier, more specific searches first. Impressions in Search Console usually grow before clicks do." },
+      { type: "h3", text: "Months 6–12 and beyond: growth" },
+      { type: "p", text: "As your site earns trust, harder keywords start moving and visitors turn into enquiries. Results tend to build on each other the longer you keep going." },
+      {
+        type: "tip",
+        title: "Local businesses can move faster",
+        text: "For local searches, a complete Google Business Profile, genuine reviews and accurate details can help sooner than ranking nationally.",
+      },
+      { type: "h2", text: "How do you know if SEO is working?" },
+      {
+        type: "ul",
+        items: [
+          "More impressions in Google Search Console — your pages are being shown",
+          "Better average positions for your target keywords",
+          "More clicks and visitors from organic search",
+          "More calls, forms and bookings from those visitors",
+        ],
+      },
+      { type: "h2", text: "Can you speed SEO up?" },
+      {
+        type: "p",
+        text: "You can’t force Google, but you can avoid slowing it down: fix technical problems first, target realistic keywords, publish genuinely useful pages, link related pages together and keep going consistently. If you need enquiries now, run Google Ads alongside SEO — see [Google Ads vs SEO](/blog/google-ads-vs-seo-new-business).",
+      },
+      {
+        type: "p",
+        text: "Be careful of anyone who promises fast or guaranteed rankings. Google itself warns that no one can guarantee a number one ranking — one of several [SEO myths](/blog/seo-myths) worth knowing.",
+      },
+      { type: "cta", text: "Want a realistic SEO plan for your website? Tell us about your business and goals.", service: "seo-google-business" },
+    ],
+    faqs: [
+      { q: "How long does SEO take?", a: "Usually several months. Google’s guidance says it often takes four months to a year to implement improvements and start seeing results, depending on competition and your website." },
+      { q: "How long does it take a new website to rank on Google?", a: "New websites usually take longer than established ones, because Google needs time to find and trust them. Starting with less competitive keywords helps." },
+      { q: "Why are my impressions rising but clicks are not?", a: "That’s common early on: your pages are being shown but not yet high enough to get many clicks. Keep improving the pages and titles." },
+      { q: "Do I need to keep doing SEO after I rank?", a: "Yes. Competitors and search results keep changing, so ongoing updates help you keep and grow your rankings." },
+    ],
+  },
+  {
+    slug: "keyword-mapping-beginners-guide",
+    title: "Keyword mapping: a beginner’s guide to planning your website’s SEO",
+    description:
+      "What keyword mapping is, why it matters and how to create a simple keyword map so every page on your website targets the right search.",
+    category: "SEO",
+    date: "2026-11-05",
+    cover: "/blog/keyword-mapping.svg",
+    coverAlt: "Illustration of keywords connected by lines to the website pages they belong to",
+    keywords: ["keyword mapping", "keyword map", "how to create a keyword map", "seo keyword planning"],
+    services: ["seo-google-business"],
+    body: [
+      {
+        type: "p",
+        text: "Keyword research tells you what people search for. Keyword mapping tells you which page on your website should rank for each of those searches. It’s one of the simplest ways to make SEO organised — and to stop your own pages competing against each other.",
+      },
+      { type: "h2", text: "What is keyword mapping?" },
+      {
+        type: "p",
+        text: "Keyword mapping is assigning each important keyword (and its close variations) to one page on your website. The homepage might target your main service and location, each service page targets that service, and each blog article targets a specific question. The result is a keyword map: a simple table showing which page targets which search.",
+      },
+      {
+        type: "img",
+        src: "/blog/keyword-map-example.svg",
+        alt: "Example keyword map table with page URLs, main keywords, related keywords and search intent for a dental clinic website",
+        caption: "A simple keyword map: one main keyword per page, plus related keywords and the searcher’s intent.",
+      },
+      { type: "h2", text: "Why keyword mapping matters" },
+      {
+        type: "ul",
+        items: [
+          "Each page gets a clear focus, which helps Google understand it",
+          "It prevents keyword cannibalization — two of your pages fighting for the same search",
+          "It shows gaps: important searches you don’t have a page for yet",
+          "It makes writing easier, because every page has a clear goal",
+          "It guides internal links between related pages",
+        ],
+      },
+      { type: "h2", text: "How to create a keyword map, step by step" },
+      {
+        type: "ol",
+        items: [
+          "List your keywords from research (Google Keyword Planner, Semrush, Search Console or your own customer questions).",
+          "Group keywords that mean the same thing — “teeth whitening” and “whitening teeth price” usually belong together.",
+          "Decide the search intent for each group: informational (wants to learn), commercial (comparing options), transactional (ready to buy or book) or local.",
+          "Match each group to the best existing page — or note that a new page is needed.",
+          "Choose one main keyword per page and a few related ones.",
+          "Record it in a spreadsheet: URL, main keyword, related keywords, intent, search volume and status.",
+          "Use the map when writing page titles, headings and content, and update it as you add pages.",
+        ],
+      },
+      {
+        type: "tip",
+        title: "Match intent before volume",
+        text: "A service page should target searches from people ready to book; an article should target questions. Putting an informational keyword on a sales page (or the other way round) rarely ranks well.",
+      },
+      { type: "h2", text: "How many keywords should one page target?" },
+      {
+        type: "p",
+        text: "Give each page one main keyword and a handful of closely related variations or questions. For a service business, start with the pages in our [website checklist](/blog/service-business-website-checklist). If two keywords need different answers, they probably need different pages.",
+      },
+      { type: "h2", text: "Common keyword mapping mistakes" },
+      {
+        type: "ul",
+        items: [
+          "Targeting the same keyword on several pages",
+          "Ignoring search intent",
+          "Forcing keywords unnaturally into text",
+          "Never updating the map as the website grows",
+        ],
+      },
+      { type: "cta", text: "Need a keyword plan for your website? We can research, map and build the pages for you.", service: "seo-google-business" },
+    ],
+    faqs: [
+      { q: "What’s the difference between keyword research and keyword mapping?", a: "Keyword research finds what people search for. Keyword mapping decides which page on your website should target each of those searches." },
+      { q: "What tools can I use for keyword mapping?", a: "A simple spreadsheet works well. Use keyword tools such as Google Keyword Planner, Semrush or Google Search Console to find the keywords." },
+      { q: "Does keyword mapping prevent keyword cannibalization?", a: "Yes. By giving each keyword group one page, you avoid having several of your own pages compete for the same search." },
+    ],
+  },
+  {
+    slug: "seo-myths",
+    title: "SEO myths business owners should stop believing",
+    description:
+      "Six common SEO myths — from guaranteed rankings to keyword stuffing — and what actually helps your website rank in Google.",
+    category: "SEO",
+    date: "2026-11-05",
+    cover: "/blog/seo-myths.svg",
+    coverAlt: "Illustration of a crossed-out myth card next to a fact card with a tick",
+    keywords: ["seo myths", "seo myths and facts", "common seo mistakes", "seo misconceptions"],
+    services: ["seo-google-business"],
+    body: [
+      {
+        type: "p",
+        text: "SEO advice is everywhere, and plenty of it is outdated or simply wrong. Believing the wrong things can waste your budget — or even harm your website. Here are six myths we hear often, and what’s actually true.",
+      },
+      {
+        type: "img",
+        src: "/blog/seo-myths-list.svg",
+        alt: "Six SEO myths: guaranteed number one ranking, meta keywords tag, more keywords is better, SEO is one-time, Google Ads boosts SEO, duplicate content penalty",
+        caption: "Six myths covered in this article.",
+      },
+      { type: "h2", text: "Myth 1: “Someone can guarantee you a #1 ranking”" },
+      {
+        type: "p",
+        text: "No one can guarantee a top position, because Google decides rankings and changes its systems constantly. Google’s own advice is to be wary of anyone who promises guaranteed rankings. A good SEO partner explains what they’ll do and how they’ll measure progress instead.",
+      },
+      { type: "h2", text: "Myth 2: “The meta keywords tag helps you rank”" },
+      {
+        type: "p",
+        text: "Google has said for many years that it doesn’t use the meta keywords tag for ranking. What matters is your page title, headings and content clearly matching what people search for.",
+      },
+      { type: "h2", text: "Myth 3: “More keywords on a page is better”" },
+      {
+        type: "p",
+        text: "Repeating a keyword again and again — keyword stuffing — makes text hard to read and goes against Google’s spam policies. Write naturally for people, use the main keyword where it fits, and cover the topic thoroughly.",
+      },
+      { type: "h2", text: "Myth 4: “SEO is a one-time job”" },
+      {
+        type: "p",
+        text: "Competitors publish new content, customer questions change and search results keep evolving. SEO works best as ongoing work: improving pages, adding new ones, fixing problems and building your reputation. Find out [how long SEO takes](/blog/how-long-does-seo-take) to show results.",
+      },
+      { type: "h2", text: "Myth 5: “Running Google Ads improves your SEO”" },
+      {
+        type: "p",
+        text: "Paying for Google Ads doesn’t improve your organic rankings — Google keeps the two separate. Ads and SEO still work well together: ads bring visitors now, and the keyword data they produce helps you plan SEO.",
+      },
+      { type: "h2", text: "Myth 6: “Duplicate content gets you penalised”" },
+      {
+        type: "p",
+        text: "Ordinary duplicate content — such as the same product description on two URLs — doesn’t usually lead to a penalty; Google typically picks one version to show. It can still waste effort and split signals, so it’s worth fixing. Copying other websites’ content to manipulate rankings is a different matter and can cause problems.",
+      },
+      {
+        type: "tip",
+        title: "What actually helps",
+        text: "Useful content that answers real questions, a fast and mobile-friendly website, clear page titles and headings, a complete Google Business Profile for local searches, and genuine links and mentions from other websites.",
+      },
+      { type: "h2", text: "Other myths worth questioning" },
+      {
+        type: "ul",
+        items: [
+          "“You must submit your site to Google every week” — you don’t; Google finds updates itself, and Search Console can help",
+          "“More pages always means better rankings” — quality and usefulness matter more than quantity",
+          "“Social media likes directly boost rankings” — social media helps people find you, but likes aren’t a direct ranking factor",
+        ],
+      },
+      { type: "cta", text: "Want honest SEO advice for your website? Tell us what you’re trying to achieve.", service: "seo-google-business" },
+    ],
+    faqs: [
+      { q: "Is SEO dead?", a: "No. People still search Google every day to find businesses, products and answers. SEO is how your website appears in those results." },
+      { q: "Can SEO be done once and left alone?", a: "Not for long. Search results and competitors change, so regular updates keep your website visible." },
+      { q: "Does Google penalise duplicate content?", a: "Usually not for ordinary duplication within your own site, but it can split signals, so it’s worth fixing. Copying other sites to manipulate rankings can cause problems." },
+    ],
+  },
+  {
     slug: "website-cost-small-business-pakistan",
     title: "How much does a website cost for a small business in Pakistan? (2026 guide)",
     description:
