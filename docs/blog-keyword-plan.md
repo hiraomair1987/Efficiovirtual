@@ -19,7 +19,7 @@ The others are suggested questions to confirm in Google's "People also ask" box,
 
 ## Tier 1 — write first (low difficulty, strong fit)
 
-### 1. Local SEO for dentists and clinics: how to get more patients from Google
+### 1. Local SEO for dentists and clinics: how to get more patients from Google  ✅ published 2026-11-05
 - Main keyword: local seo for dentists (2,400 · KD 19)
 - Related: dental seo agency (480 · 10), dental marketing services (390 · 18), dental web marketing (170 · 12), healthcare marketing agency dubai (590 · 19, UAE), healthcare marketing agency (140 · 13)
 - Links to: SEO & Google Business service; HIMAHS case study (healthcare)
@@ -30,7 +30,7 @@ The others are suggested questions to confirm in Google's "People also ask" box,
   - Should a clinic use Google Ads or SEO first?
   - How do patient reviews affect local rankings?
 
-### 2. Keyword mapping: a beginner's guide (with a free template idea)
+### 2. Keyword mapping: a beginner's guide (with a free template idea)  ✅ published 2026-11-05
 - Main keyword: keyword mapping (2,900 · KD 22)
 - Links to: SEO service; "Types of keywords" article
 - Questions:
@@ -40,7 +40,7 @@ The others are suggested questions to confirm in Google's "People also ask" box,
   - What's the difference between keyword mapping and keyword research?
   - How does keyword mapping prevent keyword cannibalization?
 
-### 3. How long does SEO take to work?
+### 3. How long does SEO take to work?  ✅ published 2026-11-05
 - Main keyword: how long does seo take (1,300 · KD 25)
 - Links to: SEO service; "Google Ads vs SEO" article
 - Questions:
@@ -50,7 +50,7 @@ The others are suggested questions to confirm in Google's "People also ask" box,
   - What can speed up SEO results?
   - How do you know if SEO is working?
 
-### 4. SEO myths business owners should ignore
+### 4. SEO myths business owners should ignore  ✅ published 2026-11-05
 - Main keyword: seo myths (1,300 · KD 16)
 - Questions:
   - Is SEO dead?

@@ -26,6 +26,21 @@ export function generateMetadata({ params }: Params): Metadata {
 
 const fmt = (d: string) => new Date(d).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
 
+/** Turns [text](/link) inside article text into a link. */
+function inline(text: string) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return parts.map((part, i) => {
+    const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    return m ? (
+      <Link key={i} href={m[2]} className="text-link">
+        {m[1]}
+      </Link>
+    ) : (
+      part
+    );
+  });
+}
+
 function renderBlock(b: Block, i: number) {
   switch (b.type) {
     case "h2":
@@ -37,12 +52,12 @@ function renderBlock(b: Block, i: number) {
     case "h3":
       return <h3 key={i}>{b.text}</h3>;
     case "p":
-      return <p key={i}>{b.text}</p>;
+      return <p key={i}>{inline(b.text)}</p>;
     case "ul":
       return (
         <ul key={i}>
           {b.items.map((x) => (
-            <li key={x}>{x}</li>
+            <li key={x}>{inline(x)}</li>
           ))}
         </ul>
       );
@@ -50,7 +65,7 @@ function renderBlock(b: Block, i: number) {
       return (
         <ol key={i}>
           {b.items.map((x) => (
-            <li key={x}>{x}</li>
+            <li key={x}>{inline(x)}</li>
           ))}
         </ol>
       );
@@ -72,7 +87,7 @@ function renderBlock(b: Block, i: number) {
         <div key={i} className="blog-stage">
           <aside className="article-tip" data-3d="">
             {b.title && <p className="font-semibold text-cream">{b.title}</p>}
-            <p className="mt-1">{b.text}</p>
+            <p className="mt-1">{inline(b.text)}</p>
           </aside>
         </div>
       );
